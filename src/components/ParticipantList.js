@@ -7,7 +7,7 @@ const ParticipantList = () => {
     {
       id: 1,
       name: "Ann Culhane",
-      phone: "56842692658",
+      card_no: "56842692658",
       department: "İnsan Kaynakları",
       location: "Ofis",
       gender: "Kadın",
@@ -15,7 +15,7 @@ const ParticipantList = () => {
     {
       id: 2,
       name: "Ahmad Rosser",
-      phone: "56842692658",
+      card_no: "56842692658",
       department: "Bilgi İşlem",
       location: "Ofis",
       gender: "Erkek",
@@ -42,7 +42,7 @@ const ParticipantList = () => {
             {participants.map((participant, index) => (
               <tr key={participant.id}>
                 <td> {index + 1} </td> <td> {participant.name} </td>{" "}
-                <td> {participant.phone} </td>{" "}
+                <td> {participant.card_no} </td>{" "}
                 <td> {participant.department} </td>{" "}
                 <td> {participant.location} </td>{" "}
                 <td> {participant.gender} </td>{" "}

@@ -6,7 +6,7 @@ const AddNewParticipant = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
-    phone: "",
+    card_no: "",
     department: "",
     location: "",
     gender: "",
@@ -48,8 +48,8 @@ const AddNewParticipant = () => {
             ID:
             <input
               type="text"
-              name="phone"
-              value={form.phone}
+              name="card_no"
+              value={form.card_no}
               onChange={handleChange}
               required
             />
