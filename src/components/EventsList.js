@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaTrashAlt } from "react-icons/fa";
 import "./EventList.css";
@@ -47,6 +47,7 @@ const events = [
 ];
 
 const EventList = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
   const handleParticipantClick = () => {
@@ -61,6 +62,14 @@ const EventList = () => {
     navigate("./add-new-event");
   };
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredEvents = events.filter((event) =>
+    event.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="container">
       <header className="header">
@@ -68,7 +77,13 @@ const EventList = () => {
           <img src="./logo-esbas.png" alt="ESBAŞ Logo" className="logo" />
         </div>{" "}
         <div className="search-container">
-          <input type="text" placeholder="ARA" className="search-bar" />
+          <input
+            type="text"
+            placeholder="ARA"
+            className="search-bar"
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />{" "}
           <button onClick={handleYeniEtkinlik} className="new-event-button">
             +YENİ ETKİNLİK{" "}
           </button>{" "}
@@ -84,7 +99,7 @@ const EventList = () => {
           </thead>{" "}
           <tbody>
             {" "}
-            {events.map((event) => (
+            {filteredEvents.map((event) => (
               <tr key={event.id}>
                 <td> {event.id} </td> <td> {event.name} </td>{" "}
                 <td> {event.type} </td> <td> {event.location} </td>{" "}
