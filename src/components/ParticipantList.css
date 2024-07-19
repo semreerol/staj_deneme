@@ -28,12 +28,47 @@
   margin-right: 50px;
 }
 
+/* Araç çubuğu stilini ayarlar */
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
 /* Katılımcı listesi stilini ayarlar */
 
 .participant-list {
   margin-top: 50px;
   margin-left: 30px;
   margin-right: 20px;
+}
+
+.excel-button {
+  margin-top: 60px;
+  width: 150px;
+  /* Butonun genişliği */
+  height: 45px;
+  /* Butonun yüksekliği */
+  background-color: #007bff;
+  /* Butonun arka plan rengi */
+  color: #fff;
+  /* Butonun yazı rengi */
+  border: none;
+  /* Butonun kenarlığı */
+  border-radius: 4px;
+  /* Butonun köşe ovalleştirmesi */
+  text-align: center;
+  /* Butonun yazı hizalaması */
+  line-height: 30px;
+  /* Butonun dikey hizalaması */
+  cursor: pointer;
+  /* Butonun üzerine gelindiğinde fare işaretçisi */
+}
+
+.excel-button:hover {
+  background-color: #0056b3;
+  /* Butonun üzerine gelindiğinde arka plan rengi */
 }
 
 /* Tablo stilini ayarlar */

@@ -23,12 +23,22 @@ const ParticipantList = () => {
     // Diğer katılımcılar...
   ];
 
+  const sendList = () => {
+    console.log("excel e gönderildi");
+    //excel bağlantısı yapılmadı.
+  };
+
   return (
     <div className="container">
       <header className="header">
         <img src="./logo-esbas.png" alt="ESBAŞ Logo" className="logo" />
       </header>{" "}
       <div className="participant-list">
+        <div className="toolbar">
+          <button className="excel-button" onClick={sendList}>
+            +Excel Aktar{" "}
+          </button>{" "}
+        </div>{" "}
         <h2> Katılımcı Listesi </h2>{" "}
         <table>
           <thead>
