@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ParticipantList.css";
+import * as XLSX from 'xlsx';
+import { saveAs } from 'file-saver';
 
 const ParticipantList = () => {
   const participants = [
@@ -22,10 +24,13 @@ const ParticipantList = () => {
     },
     // Diğer katılımcılar...
   ];
-
-  const sendList = () => {
-    console.log("excel e gönderildi");
-    //excel bağlantısı yapılmadı.
+const exportToExcel = () => {
+    const worksheet = XLSX.utils.json_to_sheet(participants);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Katılımcılar");
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
+    saveAs(blob, 'katilimci-listesi.xlsx');
   };
 
   return (
@@ -35,7 +40,7 @@ const ParticipantList = () => {
       </header>{" "}
       <div className="participant-list">
         <div className="toolbar">
-          <button className="excel-button" onClick={sendList}>
+          <button className="excel-button" onClick={exportToExcel}>
             +Excel Aktar{" "}
           </button>{" "}
         </div>{" "}
