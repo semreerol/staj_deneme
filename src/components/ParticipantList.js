@@ -27,9 +27,9 @@ const ParticipantList = () => {
     <div className="container">
       <header className="header">
         <img src="./logo-esbas.png" alt="ESBAŞ Logo" className="logo" />
-        <h2> Katılımcı Listesi </h2>{" "}
       </header>{" "}
       <div className="participant-list">
+        <h2> Katılımcı Listesi </h2>{" "}
         <table>
           <thead>
             <tr>
