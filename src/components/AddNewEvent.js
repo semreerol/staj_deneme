@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./AddNewEvent.css";
 
 const AddNewEvent = () => {
@@ -6,12 +7,16 @@ const AddNewEvent = () => {
   const [eventType, setEventType] = useState("");
   const [location, setLocation] = useState("");
   const [time, setTime] = useState("");
+  const navigate = useNavigate();
 
   const handleSave = () => {
     console.log("Event Name:", eventName);
     console.log("Event Type:", eventType);
     console.log("Location:", location);
     console.log("Time:", time);
+  };
+  const handleEventType = () => {
+    navigate("./event-type");
   };
 
   return (
@@ -42,6 +47,10 @@ const AddNewEvent = () => {
             <option value="Toplantı"> Toplantı </option>{" "}
             <option value="Atölye"> Atölye </option>{" "}
           </select>{" "}
+          <button className="event_type" onClick={handleEventType}>
+            {" "}
+            ...{" "}
+          </button>{" "}
         </div>{" "}
         <div className="form-group">
           <label> Konum </label>{" "}
