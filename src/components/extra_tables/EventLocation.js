@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./EventLocation.css";
+// import logo from "../logo-esbas.png";
 
 function EventLocation() {
   const [locations, setLocations] = useState([
@@ -23,7 +24,14 @@ function EventLocation() {
   return (
     <div className="container">
       <header className="header">
-        <img src="./logo-esbas.png" className="logo" alt="logo" />
+        {" "}
+        {
+          <img
+            src=/*{logo} "./logo-esbas.png"*/ {`${process.env.PUBLIC_URL}/logo-esbas.png`}
+            className="logo"
+            alt="logo"
+          />
+        }{" "}
       </header>{" "}
       <h2> ETKİNLİK KONUM </h2>{" "}
       <ul className="location-list">
