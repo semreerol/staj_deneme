@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { sendEventData } from "../api/api";
-import { Result, message } from "antd";
+import { message } from "antd";
 import "./CardReader.css";
 
 function CardReader() {

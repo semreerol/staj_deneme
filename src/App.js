@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EventList from "./components/EventsList";
 import CardReader from "./components/CardReader";
 import EventEnded from "./components/EventEnded";
