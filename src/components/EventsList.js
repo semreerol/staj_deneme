@@ -123,7 +123,12 @@ const EventList = () => {
                   )}{" "}
                 </td>{" "}
                 <td>
-                  <FaTrashAlt />
+                  <button className="update-button">
+                    <FaEdit />
+                  </button>
+                  <button className="delete-button"> 
+                    <FaTrashAlt />
+                  </button>
                 </td>{" "}
               </tr>
             ))}{" "}
