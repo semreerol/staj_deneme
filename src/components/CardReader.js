@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { sendEventData } from "../api/api";
+import { Result, message } from "antd";
 import "./CardReader.css";
 
 function CardReader() {
@@ -24,14 +25,17 @@ function CardReader() {
     try {
       await sendEventData({ data: cardInput });
       console.log("Veri başarıyla gönderildi.");
+      message.success("Etkinliğe Katılımınız Başarıyla Gerçekleşti");
     } catch (error) {
       console.error("Veri gönderilirken bir hata oluştu:", error);
+      message.error("Etkinliğe Kaydınız Oluşturulamadı!");
     }
   };
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleSubmit(event);
+      console.log("başarıyla kayıt yapıldı.");
     }
   };
 
