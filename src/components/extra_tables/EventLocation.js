@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./EventLocation.css";
 // import logo from "../logo-esbas.png";
 
 function EventLocation() {
+  const navigate = useNavigate();
   const [locations, setLocations] = useState([
     "Toplantı Salonu",
     "Bahçe",
@@ -22,7 +23,7 @@ function EventLocation() {
     setLocations(locations.filter((_, i) => i !== index));
   };
   const handleLogoClick = () => {
-    Navigate("/");
+    navigate("/");
   };
   return (
     <div className="container">

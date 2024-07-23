@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./ParticipantLocation.css";
+import { useNavigate } from "react-router-dom";
 
 function ParticipantLocation() {
   const [locations, setLocations] = useState(["Ofis", "Saha"]);
   const [newLocation, setNewLocation] = useState("");
 
+  const navigate = useNavigate();
   const addLocation = () => {
     if (newLocation.trim()) {
       setLocations([...locations, newLocation.trim()]);
@@ -16,12 +18,16 @@ function ParticipantLocation() {
     setLocations(locations.filter((_, i) => i !== index));
   };
 
+  const handleLogoClick = () => {
+    navigate("/");
+  };
   return (
     <div className="container">
       <header className="header">
         <img
           src={`${process.env.PUBLIC_URL}/logo-esbas.png`}
           className="logo"
+          onClick={handleLogoClick}
           alt="ESBAŞ Logo"
         />
       </header>{" "}

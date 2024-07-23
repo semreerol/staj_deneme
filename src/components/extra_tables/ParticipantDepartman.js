@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./ParticipantDepartman.css";
+import { useNavigate } from "react-router-dom";
 
 function ParticipantDepartman() {
+  const navigate = useNavigate();
   const [departments, setDepartments] = useState([
     "İnsan Kaynakları",
     "Bilgi İşlem",
@@ -18,12 +20,16 @@ function ParticipantDepartman() {
   const deleteDepartment = (index) => {
     setDepartments(departments.filter((_, i) => i !== index));
   };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="container">
       <header className="header">
         <img
           src={`${process.env.PUBLIC_URL}/logo-esbas.png`}
+          onClick={handleLogoClick}
           alt="ESBAŞ Logo"
           className="logo"
         />

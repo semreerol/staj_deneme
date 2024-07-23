@@ -102,7 +102,8 @@ const EventList = () => {
           <thead>
             <tr>
               <th> # </th> <th> ETKİNLİK ADI </th> <th> ETKİNLİK TİPİ </th>{" "}
-              <th> KONUM </th> <th> ZAMAN </th> <th> </th> <th> </th>{" "}
+              <th> KONUM </th> <th> ZAMAN </th> <th> </th>
+              <th> </th>
             </tr>{" "}
           </thead>{" "}
           <tbody>

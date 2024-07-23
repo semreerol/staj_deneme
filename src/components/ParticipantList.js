@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import "./ParticipantList.css";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ParticipantList = () => {
+  const navigate = useNavigate();
   const participants = [
     {
       id: 1,
@@ -37,7 +38,7 @@ const ParticipantList = () => {
     saveAs(blob, "katilimci-listesi.xlsx");
   };
   const handleLogoClick = () => {
-    //navigate("/");
+    navigate("/");
   };
 
   return (

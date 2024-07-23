@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./ParticipantGender.css";
+import { useNavigate } from "react-router-dom";
 
 function ParticipantGender() {
   const [genders, setGenders] = useState(["Kadın", "Erkek"]);
   const [newGender, setNewGender] = useState("");
 
+  const navigate = useNavigate();
   const addGender = () => {
     if (newGender.trim()) {
       setGenders([...genders, newGender.trim()]);
@@ -15,12 +17,16 @@ function ParticipantGender() {
   const deleteGender = (index) => {
     setGenders(genders.filter((_, i) => i !== index));
   };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="container">
       <header className="header">
         <img
           src=/*"./logo-esbas.png"*/ {`${process.env.PUBLIC_URL}/logo-esbas.png`}
+          onClick={handleLogoClick}
           className="logo"
           alt="logo"
         />

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./EventType.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function EventType() {
+  const navigate = useNavigate();
   const [eventTypes, setEventTypes] = useState([
     "Konferans",
     "Webinar",
@@ -22,9 +23,9 @@ function EventType() {
   const deleteEventType = (index) => {
     setEventTypes(eventTypes.filter((_, i) => i !== index));
   };
-  // const handleLogoClick = () => {
-  //   navigate("/");
-  // };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="container">
@@ -32,7 +33,7 @@ function EventType() {
         <img
           src=/*"./logo-esbas.png"*/ {`${process.env.PUBLIC_URL}/logo-esbas.png`}
           className="logo"
-          //onClick={handleLogoClick}
+          onClick={handleLogoClick}
           alt="logo"
         />
       </header>{" "}
