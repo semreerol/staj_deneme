@@ -25,11 +25,11 @@ function EventEnded() {
       </header>{" "}
       <div className="event-ended">
         <h1> ETKİNLİK SONA ERDİ. </h1>{" "}
-        <h1> PERSONEL DÖKÜMÜNÜ GÖRMEK İÇİN TIKLAYINIZ </h1>{" "}
+        <h1> ÇALIŞAN DÖKÜMÜNÜ GÖRMEK İÇİN TIKLAYINIZ </h1>{" "}
         <div className="buttons">
           <button onClick={handlePersonelList} className="personellist">
             {" "}
-            PERSONEL DÖKÜMÜ{" "}
+            ÇALIŞAN DÖKÜMÜ{" "}
           </button>{" "}
         </div>{" "}
       </div>{" "}
