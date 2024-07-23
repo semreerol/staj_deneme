@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./EventType.css";
+// import { useNavigate } from "react-router-dom";
 
 function EventType() {
   const [eventTypes, setEventTypes] = useState([
@@ -21,6 +22,9 @@ function EventType() {
   const deleteEventType = (index) => {
     setEventTypes(eventTypes.filter((_, i) => i !== index));
   };
+  // const handleLogoClick = () => {
+  //   navigate("/");
+  // };
 
   return (
     <div className="container">
@@ -28,6 +32,7 @@ function EventType() {
         <img
           src=/*"./logo-esbas.png"*/ {`${process.env.PUBLIC_URL}/logo-esbas.png`}
           className="logo"
+          //onClick={handleLogoClick}
           alt="logo"
         />
       </header>{" "}
