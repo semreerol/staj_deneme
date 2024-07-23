@@ -126,3 +126,16 @@ td {
 .baslat-butonu:hover {
   opacity: 0.8;
 }
+
+.update-button {
+  background-color:#f8f8f8;
+  color: green;
+  margin-left: 10px;
+}
+
+.delete-button {
+  background-color:#f8f8f8;
+  color: red;
+  margin-left: 10px;
+}
+
