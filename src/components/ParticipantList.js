@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ParticipantList.css";
-import * as XLSX from 'xlsx';
-import { saveAs } from 'file-saver';
+import * as XLSX from "xlsx";
+import { saveAs } from "file-saver";
+//import { useNavigate } from "react-router-dom";
 
 const ParticipantList = () => {
   const participants = [
@@ -24,19 +25,30 @@ const ParticipantList = () => {
     },
     // Diğer katılımcılar...
   ];
-const exportToExcel = () => {
+  const exportToExcel = () => {
     const worksheet = XLSX.utils.json_to_sheet(participants);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Katılımcılar");
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(blob, 'katilimci-listesi.xlsx');
+    const excelBuffer = XLSX.write(workbook, {
+      bookType: "xlsx",
+      type: "array",
+    });
+    const blob = new Blob([excelBuffer], { type: "application/octet-stream" });
+    saveAs(blob, "katilimci-listesi.xlsx");
+  };
+  const handleLogoClick = () => {
+    //navigate("/");
   };
 
   return (
     <div className="container">
       <header className="header">
-        <img src="./logo-esbas.png" alt="ESBAŞ Logo" className="logo" />
+        <img
+          src="./logo-esbas.png"
+          onClick={handleLogoClick}
+          alt="ESBAŞ Logo"
+          className="logo"
+        />
       </header>{" "}
       <div className="participant-list">
         <div className="toolbar">

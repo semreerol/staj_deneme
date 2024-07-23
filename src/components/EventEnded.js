@@ -9,11 +9,19 @@ function EventEnded() {
   const handlePersonelList = () => {
     navigate("/participant-list");
   };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="EventEnded">
       <header className="header">
-        <img src={"./logo-esbas.png"} className="logo" alt="logo" />
+        <img
+          src={"./logo-esbas.png"}
+          onClick={handleLogoClick}
+          className="logo"
+          alt="logo"
+        />
       </header>{" "}
       <div className="event-ended">
         <h1> ETKİNLİK SONA ERDİ. </h1>{" "}

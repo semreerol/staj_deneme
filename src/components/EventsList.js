@@ -70,11 +70,19 @@ const EventList = () => {
     event.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const handleLogoClick = () => {
+    navigate("/");
+  };
   return (
     <div className="container">
       <header className="header">
         <div className="logo-container">
-          <img src="./logo-esbas.png" alt="ESBAŞ Logo" className="logo" />
+          <img
+            src="./logo-esbas.png"
+            onClick={handleLogoClick}
+            alt="ESBAŞ Logo"
+            className="logo"
+          />
         </div>{" "}
         <div className="search-container">
           <input
@@ -125,10 +133,10 @@ const EventList = () => {
                 <td>
                   <button className="update-button">
                     <FaEdit />
-                  </button>
-                  <button className="delete-button"> 
+                  </button>{" "}
+                  <button className="delete-button">
                     <FaTrashAlt />
-                  </button>
+                  </button>{" "}
                 </td>{" "}
               </tr>
             ))}{" "}

@@ -34,11 +34,19 @@ const AddNewParticipant = () => {
   const handleParticipantGender = () => {
     navigate("./participant-gender");
   };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="add-participant-container">
       <header className="header">
-        <img src={"./logo-esbas.png"} className="logo" alt="ESBAŞ Logo" />
+        <img
+          src={"./logo-esbas.png"}
+          onClick={handleLogoClick}
+          className="logo"
+          alt="ESBAŞ Logo"
+        />
       </header>{" "}
       <div className="add-participant">
         <h2> Yeni Katılımcı Ekle </h2>{" "}

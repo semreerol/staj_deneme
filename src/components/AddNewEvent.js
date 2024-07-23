@@ -21,11 +21,19 @@ const AddNewEvent = () => {
   const handleEventLocation = () => {
     navigate("./event-location");
   };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="add-new-event-container">
       <header className="header">
-        <img src="./logo-esbas.png" className="logo" alt="logo" />
+        <img
+          src="./logo-esbas.png"
+          onClick={handleLogoClick}
+          className="logo"
+          alt="logo"
+        />
       </header>{" "}
       <div className="add-new-event">
         <h1> Yeni Etkinlik Oluşturma </h1>{" "}

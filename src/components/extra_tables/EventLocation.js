@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import "./EventLocation.css";
 // import logo from "../logo-esbas.png";
 
@@ -20,7 +21,9 @@ function EventLocation() {
   const deleteLocation = (index) => {
     setLocations(locations.filter((_, i) => i !== index));
   };
-
+  const handleLogoClick = () => {
+    Navigate("/");
+  };
   return (
     <div className="container">
       <header className="header">
@@ -28,6 +31,7 @@ function EventLocation() {
         {
           <img
             src=/*{logo} "./logo-esbas.png"*/ {`${process.env.PUBLIC_URL}/logo-esbas.png`}
+            onClick={handleLogoClick}
             className="logo"
             alt="logo"
           />

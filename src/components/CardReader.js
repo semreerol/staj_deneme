@@ -38,11 +38,19 @@ function CardReader() {
       console.log("başarıyla kayıt yapıldı.");
     }
   };
+  const handleLogoClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="CardReader">
       <header className="header">
-        <img src={"./logo-esbas.png"} className="logo" alt="logo" />
+        <img
+          src={"./logo-esbas.png"}
+          onClick={handleLogoClick}
+          className="logo"
+          alt="logo"
+        />
       </header>{" "}
       <div className="card-reader">
         <h1> ETKİNLİĞE HOŞGELDİNİZ </h1> <p> LÜTFEN KARTINIZI OKUTUNUZ! </p>{" "}
