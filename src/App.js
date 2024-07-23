@@ -14,6 +14,9 @@ import ParticipantList from "./components/ParticipantList";
 import AddNewEvent from "./components/AddNewEvent";
 import EventType from "./components/extra_tables/EventType";
 import EventLocation from "./components/extra_tables/EventLocation";
+import ParticipantDepartman from "./components/extra_tables/ParticipantDepartman";
+import ParticipantLocation from "./components/extra_tables/ParticipantLocation";
+import ParticipantGender from "./components/extra_tables/ParticipantGender";
 
 function App() {
   return (
@@ -29,6 +32,18 @@ function App() {
         <Route
           path="/add-new-event/event-location"
           element={<EventLocation />}
+        />{" "}
+        <Route
+          path="/add-new-participant/participant-departman"
+          element={<ParticipantDepartman />}
+        />{" "}
+        <Route
+          path="/add-new-participant/participant-location"
+          element={<ParticipantLocation />}
+        />{" "}
+        <Route
+          path="/add-new-participant/participant-gender"
+          element={<ParticipantGender />}
         />{" "}
       </Routes>{" "}
     </Router>

@@ -25,6 +25,15 @@ const AddNewParticipant = () => {
     console.log(form);
     navigate("/participantlist");
   };
+  const handleParticipantDepartman = () => {
+    navigate("./participant-departman");
+  };
+  const handleParticipantLocation = () => {
+    navigate("./participant-location");
+  };
+  const handleParticipantGender = () => {
+    navigate("./participant-gender");
+  };
 
   return (
     <div className="add-participant-container">
@@ -66,6 +75,13 @@ const AddNewParticipant = () => {
               <option value="İnsan Kaynakları"> İnsan Kaynakları </option>{" "}
               <option value="Bilgi İşlem"> Bilgi İşlem </option>{" "}
             </select>{" "}
+            <button
+              className="participant-departman"
+              onClick={handleParticipantDepartman}
+            >
+              {" "}
+              (Yeni bir Departman eklemek isterseniz tıklayın){" "}
+            </button>{" "}
           </label>{" "}
           <label>
             Konum:
@@ -79,6 +95,13 @@ const AddNewParticipant = () => {
               <option value="Ofis"> Ofis </option>{" "}
               <option value="Saha"> Saha </option>{" "}
             </select>{" "}
+            <button
+              className="participant-location"
+              onClick={handleParticipantLocation}
+            >
+              {" "}
+              (Yeni bir Konum eklemek isterseniz tıklayın){" "}
+            </button>{" "}
           </label>{" "}
           <label>
             Cinsiyet:
@@ -92,6 +115,13 @@ const AddNewParticipant = () => {
               <option value="Kadın"> Kadın </option>{" "}
               <option value="Erkek"> Erkek </option>{" "}
             </select>{" "}
+            <button
+              className="participant-gender"
+              onClick={handleParticipantGender}
+            >
+              {" "}
+              (Yeni bir Cinsiyet eklemek isterseniz tıklayın){" "}
+            </button>{" "}
           </label>{" "}
           <button type="submit"> Kaydet </button>{" "}
         </form>{" "}

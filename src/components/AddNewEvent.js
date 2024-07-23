@@ -52,7 +52,7 @@ const AddNewEvent = () => {
           </select>{" "}
           <button className="event_type" onClick={handleEventType}>
             {" "}
-            ...{" "}
+            (Yeni bir Etkinlik Türü eklemek isterseniz tıklayın){" "}
           </button>{" "}
         </div>{" "}
         <div className="form-group">
@@ -68,7 +68,7 @@ const AddNewEvent = () => {
           </select>{" "}
           <button className="event-location" onClick={handleEventLocation}>
             {" "}
-            ...{" "}
+            (Yeni bir Etkinlik Konumu eklemek isterseniz tıklayın){" "}
           </button>{" "}
         </div>{" "}
         <div className="form-group">
