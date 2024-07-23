@@ -18,6 +18,9 @@ const AddNewEvent = () => {
   const handleEventType = () => {
     navigate("./event-type");
   };
+  const handleEventLocation = () => {
+    navigate("./event-location");
+  };
 
   return (
     <div className="add-new-event-container">
@@ -63,6 +66,10 @@ const AddNewEvent = () => {
             <option value="Bahçe"> Bahçe </option>{" "}
             <option value="İzmir"> İzmir </option>{" "}
           </select>{" "}
+          <button className="event-location" onClick={handleEventLocation}>
+            {" "}
+            ...{" "}
+          </button>{" "}
         </div>{" "}
         <div className="form-group">
           <label> Zaman </label>{" "}

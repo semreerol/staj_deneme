@@ -13,6 +13,7 @@ import AddNewParticipant from "./components/AddNewParticipant";
 import ParticipantList from "./components/ParticipantList";
 import AddNewEvent from "./components/AddNewEvent";
 import EventType from "./components/extra_tables/EventType";
+import EventLocation from "./components/extra_tables/EventLocation";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
         <Route path="/add-new-participant" element={<AddNewParticipant />} />{" "}
         <Route path="/participant-list" element={<ParticipantList />} />{" "}
         <Route path="/add-new-event/event-type" element={<EventType />} />{" "}
+        <Route
+          path="/add-new-event/event-location"
+          element={<EventLocation />}
+        />{" "}
       </Routes>{" "}
     </Router>
   );

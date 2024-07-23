@@ -25,7 +25,7 @@ function EventType() {
   return (
     <div className="container">
       <header className="header">
-        <img src="./logo-esbas.png" alt="Logo" className="logo" />
+        <img src="./logo-esbas.png" className="logo" alt="logo" />
       </header>{" "}
       <h2> ETKİNLİK TÜRÜ </h2>{" "}
       <ul className="event-list">
