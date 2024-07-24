@@ -69,6 +69,7 @@
 /* Ana içeriğin üstten boşluk bırakmasını sağlar */
 
 .App {
+  width: 60vw;
   padding: 30px;
   flex: 1;
   overflow-y: auto;
@@ -81,8 +82,9 @@
   /* Kenarlık */
   border-radius: 10px;
   margin: 30px auto;
+  margin-left: -11.5rem;
   /* Ortaya hizalar */
-  width: 115%;
+  /*width: 115%;*/
   /* Sayfanın genişliğine göre ayarlanabilir */
 }
 
@@ -128,14 +130,13 @@ td {
 }
 
 .update-button {
-  background-color:#f8f8f8;
+  background-color: #f8f8f8;
   color: green;
   margin-left: 10px;
 }
 
 .delete-button {
-  background-color:#f8f8f8;
+  background-color: #f8f8f8;
   color: red;
   margin-left: 10px;
 }
-
